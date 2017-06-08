@@ -1,1 +1,1 @@
-class {'terraform_provider_alks':}
+include terraform_provider_alks
