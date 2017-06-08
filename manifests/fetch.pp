@@ -6,12 +6,10 @@ class terraform_provider_alks::fetch (
   $file_name = "${base_name}${extension}"
   $file_url  = "${base_url}/${file_name}"
 
-  include wget
   wget::fetch { 'alks_file_url':
     source      => $file_url,
     destination => "/tmp/${file_name}",
     timeout     => 600,
     verbose     => true,
-    notify      => Exec['alks_unpack'],
   }
 }
