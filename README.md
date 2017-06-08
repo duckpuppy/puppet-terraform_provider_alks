@@ -1,6 +1,5 @@
 # terraform-alks-provider
-
-[![Build Status](https://travis-ci.org/reppard/puppet-envconsul.svg?branch=master)](https://travis-ci.org/reppard/puppet-envconsul)
+[![Build Status](https://travis-ci.org/duckpuppy/puppet-terraform-provider-alks.svg?branch=master)](https://travis-ci.org/duckpuppy/puppet-terraform-provider-alks)
 
 ## Usage
 
