@@ -8,12 +8,11 @@ class terraform_provider_alks::install (
   }
 
   exec { 'alks_unpack':
-    command     => $unpack_cmd,
-    cwd         => '/usr/bin',
-    path        => ['/bin', '/usr/bin', '/usr/local/bin'],
-    refreshonly => true,
-    notify      => File['alks_cleanup_file'],
-    require     => Class['terraform_provider_alks::fetch'],
+    command => $unpack_cmd,
+    cwd     => '/usr/bin',
+    path    => ['/bin', '/usr/bin', '/usr/local/bin'],
+    notify  => File['alks_cleanup_file'],
+    require => Class['terraform_provider_alks::fetch'],
   }
 
   file { 'alks_cleanup_file':
