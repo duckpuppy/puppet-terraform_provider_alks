@@ -4,7 +4,7 @@ class terraform_provider_alks::install (
   if $file_name =~ /^.*\.zip/ {
     $unpack_cmd = "unzip -o /tmp/${file_name}"
   } elsif $file_name =~ /^.*\.tar\.gz/ {
-    $unpack_cmd = "tar zxf /tmp/${file_name} --strip-components 1"
+    $unpack_cmd = "tar zxf /tmp/${file_name}"
   }
 
   exec { 'alks_unpack':
