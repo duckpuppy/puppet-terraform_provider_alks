@@ -3,16 +3,16 @@ require 'spec_helper'
 describe 'terraform_provider_alks::fetch' do
   let(:params) do
     {
-      :base_url  => 'https://github.com/Cox-Automotive/terraform-provider-alks/releases/download/0.9.0',
-      :base_name => 'terraform-provider-alks-linux-amd64',
-      :extension => '.tar.gz'
+      :version  => 'version',
+      :arch     => 'arch',
+      :platform => 'platform'
     }
   end
 
   let(:expected_url) do
     [
       'https://github.com/Cox-Automotive/terraform-provider-alks/releases/download/',
-      '0.9.0/terraform-provider-alks-linux-amd64.tar.gz'
+      'version/terraform-provider-alks-platform-arch.tar.gz'
     ].join
   end
 

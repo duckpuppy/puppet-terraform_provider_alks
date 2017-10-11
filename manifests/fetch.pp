@@ -1,8 +1,11 @@
 class terraform_provider_alks::fetch (
-  $base_url  = $terraform_provider_alks::releases_url,
-  $base_name = $terraform_provider_alks::base_name,
-  $extension = $terraform_provider_alks::extension,
+  $version = $::terraform_provider_alks::params::version,
+  $platform = $::terraform_provider_alks::params::platform,
+  $arch = $::terraform_provider_alks::params::arch,
 ){
+  $extension = '.tar.gz'
+  $base_name = "terraform-provider-alks-${platform}-${arch}"
+  $base_url  = "https://github.com/Cox-Automotive/terraform-provider-alks/releases/download/${version}"
   $file_name = "${base_name}${extension}"
   $file_url  = "${base_url}/${file_name}"
 
