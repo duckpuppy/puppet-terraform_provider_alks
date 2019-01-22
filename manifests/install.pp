@@ -12,7 +12,6 @@ class terraform_provider_alks::install (
     cwd     => '/usr/bin',
     path    => ['/bin', '/usr/bin', '/usr/local/bin'],
     notify  => File['alks_cleanup_file'],
-    require => Class['terraform_provider_alks::fetch'],
   }
 
   file { 'alks_cleanup_file':
