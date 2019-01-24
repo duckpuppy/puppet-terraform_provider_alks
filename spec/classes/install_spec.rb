@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe 'terraform_provider_alks::install' do
+  let(:pre_condition) { 'include terraform_provider_alks::fetch' }
+
   context 'zip file' do
     let(:params) { { :file_name => 'file.zip' } }
 
