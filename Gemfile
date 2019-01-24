@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'mocha'
-gem 'puppet'
+gem 'puppet', '~> 5.0'
 gem 'guard-rake'
 gem 'rspec-puppet'
 gem 'puppetlabs_spec_helper'
