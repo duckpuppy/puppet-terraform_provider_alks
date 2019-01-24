@@ -15,7 +15,7 @@ describe 'terraform_provider_alks::install' do
     let(:params) { { :file_name => 'file.tar.gz' } }
 
     it { is_expected.to contain_exec('alks_unpack')
-          .with( :command => 'tar zxf /tmp/file.tar.gz')
+          .with( :command => 'tar zxf --transform=\'s/terraform-provider-alks(.*)?/terraform-provider-alks/x\' /tmp/file.tar.gz')
     }
   end
 end
