@@ -1,6 +1,6 @@
 {
   "name": "paikens-terraform_provider_alks",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "paikens",
   "summary": "Install terraform-provider-alks",
   "license": "Apache 2.0",
